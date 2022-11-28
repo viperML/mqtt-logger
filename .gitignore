@@ -1,0 +1,9 @@
+.direnv
+result*
+target
+.cache
+
+
+# Added by cargo
+
+/target
