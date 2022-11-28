@@ -40,7 +40,7 @@
         ...
       }: {
         packages = {
-          _toolchain_dev = with inputs.fenix.packages.${system}; (stable.withComponents [
+          _toolchain_dev = with inputs.fenix.packages.${system}; (beta.withComponents [
             "rustc"
             "cargo"
             "rust-src"
@@ -51,11 +51,16 @@
         };
 
         devShells.default = with pkgs;
-          mkShell { # Shell with CC
+          mkShell {
+            # Shell with CC
             name = "nh-dev";
             RUST_SRC_PATH = "${config.packages._toolchain_dev}/lib/rustlib/src/rust/library";
             packages = [
               config.packages._toolchain_dev
+              pkg-config
+              openssl
+              paho-mqtt-c
+              cmake
             ];
           };
       };
