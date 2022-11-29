@@ -385,7 +385,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "mqtt-client"
+name = "mqtt-logger"
 version = "0.1.0"
 dependencies = [
  "anyhow",
