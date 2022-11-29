@@ -61,6 +61,9 @@
               openssl
               paho-mqtt-c
               cmake
+
+              #
+              mosquitto
             ];
           };
       };
